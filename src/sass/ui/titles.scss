@@ -1,0 +1,9 @@
+@use "/src/sass/base/mixins.scss" as *;
+
+.title {
+  font-weight: 400;
+  font-family: "Comfortaa", cursive;
+  text-transform: uppercase;
+  font-size: 60px;
+  line-height: 67px;
+}

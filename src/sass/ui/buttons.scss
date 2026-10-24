@@ -1,0 +1,28 @@
+@use "/src/sass/base/mixins.scss" as *;
+@use "/src/sass/base/variables.scss" as *;
+
+.popup-btn {
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  & path,
+  & circle {
+    transition: all 0.3s;
+  }
+  &:hover path {
+    fill: $green;
+  }
+  &:hover circle {
+    stroke: $green;
+  }
+  &:hover span {
+    color: $blue;
+  }
+  & span {
+    padding-top: 12px;
+    display: block;
+    color: $white;
+    transition: color 0.3s;
+  }
+}

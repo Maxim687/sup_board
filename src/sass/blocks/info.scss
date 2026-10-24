@@ -1,0 +1,129 @@
+@use "/src/sass/base/variables.scss" as *;
+
+.info {
+  background-image: url("../../img/info/info-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    height: 130px;
+    background-color: $dark;
+    top: 0;
+    left: 0;
+    right: 0;
+    transform: translateY(-20px);
+    z-index: 1;
+  }
+  &__top {
+    padding-top: 220px;
+    display: flex;
+    gap: 80px;
+    margin-bottom: 70vh;
+    &-text {
+      padding-top: 230px;
+      width: 290px;
+      color: $white;
+      position: relative;
+      &--one {
+        padding-bottom: 125px;
+      }
+      &--two {
+        border-bottom: 1px solid $white;
+      }
+    }
+    &-img {
+      z-index: 6;
+    }
+  }
+  &__btn {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  &__specs {
+    display: flex;
+    align-items: center;
+    gap: 130px;
+    color: $white;
+    padding-bottom: 50px;
+    &-title {
+      width: 250px;
+    }
+    &-list {
+      padding-inline-start: 0;
+      list-style: none;
+      border-top: 1px solid $white;
+      border-bottom: 1px solid $white;
+      width: 570px;
+      padding: 30px 0 15px 0;
+      font-weight: 700;
+    }
+    &-item {
+      margin-bottom: 15px;
+      display: flex;
+      gap: 25px;
+    }
+    &-caption {
+      width: 190px;
+    }
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .info {
+    &__top {
+      display: block;
+      margin-bottom: 50vh;
+      &-text {
+        width: 100%;
+        &--two {
+          padding-bottom: 25px;
+          padding-top: 45px;
+        }
+      }
+      &-img {
+        margin: 0 auto;
+        transform: rotate(90deg);
+        max-height: 90vw;
+        margin-top: -17%;
+      }
+    }
+    &__specs {
+      display: block;
+      &-title {
+        margin: 0 auto;
+        text-align: center;
+      }
+      &-list {
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .info {
+    &__specs-list {
+      width: 100%;
+    }
+    &__specs-item {
+      display: block;
+      text-align: center;
+    }
+    &__specs-caption {
+      width: 100%;
+    }
+    &__top {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .info__top-text--one {
+    padding-top: 150px;
+  }
+}

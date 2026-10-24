@@ -1,0 +1,125 @@
+@use "/src/sass/base/variables.scss" as *;
+
+.buy {
+  padding: 150px 0 0;
+  &__inner {
+    display: flex;
+    align-items: center;
+    gap: 97px;
+  }
+  &__content {
+    width: 502px;
+    position: relative;
+  }
+  &__title {
+    margin-bottom: 50px;
+    color: $blue;
+  }
+  &__list {
+    margin-bottom: 25px;
+    padding-inline-start: 0px;
+    list-style: none;
+  }
+  &__item {
+    &:hover .buy__item-title {
+      color: $blue;
+    }
+    margin-bottom: 25px;
+    width: 292px;
+    &-title {
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 5px;
+      transition: color 0.3s;
+    }
+  }
+  &__btn {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 45px;
+    font-family: "Comfortaa", cursive;
+    text-transform: uppercase;
+    background-color: transparent;
+    border: 2px solid $blue;
+    color: $blue;
+    cursor: pointer;
+    text-align: center;
+    padding: 18px 20px 17px 20px;
+    max-width: 484px;
+    width: 100%;
+    transition: all 0.3s;
+    &:hover {
+      background-color: $green;
+      border-color: $green;
+      color: $dark;
+    }
+  }
+  &__price {
+    position: absolute;
+    width: 201px;
+    height: 199px;
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 42px;
+    color: $dark;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../../img/buy/star.svg");
+    right: 10px;
+    bottom: 130px;
+    transition: transform 0.3s;
+    &:hover {
+      transform: scale(1.15);
+    }
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .buy {
+    &__inner {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    &__img {
+      order: -1;
+    }
+    &__content {
+      width: 100%;
+    }
+    &__price {
+      pointer-events: none;
+    }
+    &__item {
+      width: 100%;
+      max-width: 600px;
+    }
+  }
+}
+
+@media screen and (max-width: 840px) {
+  .buy__price {
+    bottom: auto;
+    top: -350px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .buy {
+    padding-top: 75px;
+  }
+  .title {
+    font-size: 48px;
+    line-height: 52px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .buy__price {
+    width: 150px;
+    height: 148px;
+    background-size: cover;
+    top: -200px;
+    font-size: 30px;
+  }
+}
