@@ -10,6 +10,7 @@
   &__content {
     width: 502px;
     position: relative;
+    z-index: 1;
   }
   &__title {
     margin-bottom: 50px;
@@ -56,6 +57,7 @@
   }
   &__price {
     position: absolute;
+    z-index: 10;
     width: 201px;
     height: 199px;
     font-weight: 700;
