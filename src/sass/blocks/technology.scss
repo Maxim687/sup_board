@@ -175,6 +175,20 @@
   .gallery-min {
     padding: 20px 10px 20px;
   }
+  .gallery__box {
+    margin-top: 70px;
+  }
+  .technology {
+    margin-bottom: 70px;
+  }
+  .technology__top-inner {
+    min-height: 100vh;
+  }
+  .technology__btn {
+    position: absolute;
+    right: 0;
+    top: 26vh;
+  }
 }
 
 @media screen and (max-width: 415px) {

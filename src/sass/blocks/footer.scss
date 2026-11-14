@@ -121,6 +121,12 @@
   }
 }
 
+@media screen and (max-width: 575px) {
+  .footer {
+    padding: 70px 0;
+  }
+}
+
 @media screen and (max-width: 400px) {
   .footer {
     &__logo {
